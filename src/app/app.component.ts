@@ -11,9 +11,9 @@ export class AppComponent implements OnInit {
 	name: string = 'keka';
 	ngOnInit() {
 		if (this.name === 'nikhil') {
-			console.log('yes');
+			console.log('Correct');
 		} else {
-			console.log('no');
+			console.log('Incorrect');
 		}
 
 		console.log('this is for testing : ');
