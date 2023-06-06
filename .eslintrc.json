@@ -42,7 +42,7 @@
           "classes":"always"
           }
         ],
-        "indent":["warn","tab"],
+        "indent":["warn", 2],
         "no-unused-vars":"error",
         "eqeqeq":"error",
         "quotes":["warn","single", { "avoidEscape": true} ],
