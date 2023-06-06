@@ -8,11 +8,12 @@ import { User } from './model/user';
 })
 export class AppComponent implements OnInit {
 	title = 'My Application';
-	name: any = 'swetha';
+	name: string = 'keka';
 	ngOnInit() {
-		if (this.name == 'nikhil') {
+		if (this.name === 'nikhil') {
 			console.log('yes');
 		} else {
+			console.log('no');
 		}
 
 		console.log('this is for testing : ');
