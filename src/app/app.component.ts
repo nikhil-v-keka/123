@@ -17,7 +17,13 @@ export class AppComponent implements OnInit {
     }
 
     console.log('this is for testing : ');
+
+	for(let i:number = 0;i<5;i++){
+		console.log(i);
+	}
   }
+
+ 
   users: User[] = [
     {
       name: 'John Doe',
