@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
     console.log('this is for testing : ');
 
-    for (let i: number = 0; i < 5; i++) {
+    for (let i: number = 0; i < 5; i++){
       console.log(i);
     }
   }
@@ -30,11 +30,11 @@ export class AppComponent implements OnInit {
     },
     {
       name: 'Nikhil',
-      job: 'Movie Director',
+     								 job: 'Movie Director',
     },
     {
       name: 'Swetha',
-      job: 'Sports person',
+      			job: 'Sports person',
     },
     {
       name: 'Ram',
