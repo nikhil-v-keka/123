@@ -39,10 +39,10 @@
           "classes":"always"
           }
         ],
-        "indent":["warn",2],
+        "indent":["warn","tab"],
         "no-unused-vars":"error",
         "eqeqeq":"error",
-        "quotes":["error","double"],
+        "quotes":["warn","single", { "avoidEscape": true} ],
         "no-empty":"error"
       }
     },
