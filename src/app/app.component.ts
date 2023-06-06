@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     },
     {
       name: 'Ram',
-      job: `it's a Quality Analyst`,
+      job: 'its a Quality Analyst',
     },
   ];
 }
