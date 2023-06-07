@@ -3,9 +3,9 @@
 # Save the current state of the staging area
 git stash -q --keep-index
 
-# Run the ESLint and Prettier commands with the --fix option against the staged files
+# Run the ESLint and Prettier commands against the staged files
 npm run lint # Replace with your actual linting command
-npm run format # Replace with your actual formatting command
+npm run check # Replace with your actual formatting command
 
 # Check if any changes were made to the staged files
 git diff --exit-code --name-only --cached > /dev/null 2>&1
@@ -19,3 +19,4 @@ else
 fi
 
 exit 0
+
