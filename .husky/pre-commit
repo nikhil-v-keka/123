@@ -15,7 +15,7 @@ fi
 
 # Check if the files pass linting
 eslint --fix .
-prettier --write .
+npm run format
 
 # If the files do not pass linting or formatting, exit with an error
 if [ $? -ne 0 ]; then
