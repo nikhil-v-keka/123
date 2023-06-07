@@ -13,10 +13,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     // /* eslint-disable */
     if (this.name === 'nikhil') 
-    {console.log('Correct');}
-    else {
+      console.log('Correct');
+    else 
       console.log('Incorrect');
-    }
+    
     // /* eslint-enable */
     console.log('this is for testing : ');
 
