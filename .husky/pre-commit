@@ -8,7 +8,7 @@ git diff --name-only --cached | xargs -I {} cp --parents {} $STAGING_DIR
 
 # Run the ESLint and Prettier commands with the --fix option against the temporary staging directory
 cd $STAGING_DIR
-npm run lint # Replace with your actual linting command
+npm run lint -- --fix # Replace with your actual linting command
 npm run format # Replace with your actual formatting command
 
 # Check if any changes were made to the staged files in the temporary staging directory
