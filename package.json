@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "pretest": "lint-staged",
     "test": "ng test",
     "lint": "eslint . --rulesdir rules",
     "check": "prettier --check src",
@@ -14,8 +15,7 @@
   },
   "lint-staged": {
     "*.{js,mjs,cjs,jsx,ts,tsx,vue}": [
-       "npm run lint",
-       "npm run format"
+      "npm run lint", "npm run format"
     ]
   },
   "private": true,
@@ -52,6 +52,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "typescript": "~5.0.2"
   }

@@ -27,12 +27,10 @@ export class AppComponent implements OnInit {
   }
 
   printHello(){
-    //comment
-    const a:number = 1;
-
-    console.log(a);
-    
+    let a:number = 1;
+    a=a+1;
   }
+
 
   users: User[] = [
     {
