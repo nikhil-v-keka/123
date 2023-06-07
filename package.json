@@ -15,7 +15,7 @@
   "lint-staged": {
     "*.{js,mjs,cjs,jsx,ts,tsx,vue}": [
        "npm run lint",
-       "prettier --write ."
+       "npx prettier --write ."
     ]
   },
   "private": true,
