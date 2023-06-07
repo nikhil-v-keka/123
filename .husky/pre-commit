@@ -14,7 +14,7 @@ if git diff --cached --quiet; then
 fi
 
 # Check if the files pass linting
-eslint --fix .
+npm run lint
 npm run format
 
 # If the files do not pass linting or formatting, exit with an error
