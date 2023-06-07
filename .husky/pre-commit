@@ -1,4 +1,22 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+# #!/usr/bin/env sh
+# . "$(dirname -- "$0")/_/husky.sh"
 
-npm run format && npm run lint 
+# npm run format && npm run lint 
+
+#!/bin/sh
+
+# Check if the files are staged for commit
+if git diff --cached --quiet; then
+  # The files are not staged for commit, so exit
+  exit 0
+fi
+
+# Check if the files pass linting
+eslint --fix .
+prettier --write .
+
+# If the files do not pass linting or formatting, exit with an error
+if [ $? -ne 0 ]; then
+  echo "Linting or formatting errors detected. Please fix the errors before committing."
+  exit 1
+fi

@@ -45,6 +45,7 @@
         "indent":["warn", 2],
         "no-unused-vars":"error",
         "eqeqeq":"error",
+        "curly":["error"],
         "quotes":["warn","single", { "avoidEscape": true} ],
         "no-empty":"error",
         "@typescript-eslint/no-inferrable-types": "off"
@@ -60,6 +61,7 @@
       ],
       "rules": {
         // " @angular-eslint/alt-text":"warn"
+        // "@angular-eslint/no-unknown-attribute": "error"
       }
     }
   ]

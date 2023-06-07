@@ -9,13 +9,16 @@ import { User } from './model/user';
 export class AppComponent implements OnInit {
   title = 'My Application';
   name: string = 'keka';
+
   ngOnInit() {
-    if (this.name === 'nikhil') {
+    // /* eslint-disable */
+    if (this.name === 'nikhil')  
       console.log('Correct');
-    } else {
+
+    else {
       console.log('Incorrect');
     }
-
+    // /* eslint-enable */
     console.log('this is for testing : ');
 
     for (let i: number = 0; i < 5; i++) {
