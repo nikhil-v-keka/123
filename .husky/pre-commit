@@ -15,7 +15,7 @@ fi
 
 # Check if the files pass linting
 npm run lint
-npm run format
+npm run check
 
 # If the files do not pass linting or formatting, exit with an error
 if [ $? -ne 0 ]; then
