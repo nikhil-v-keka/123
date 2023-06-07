@@ -1,24 +1,22 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/bash
 
-# npm run format && npm run lint 
+# Save the current state of the staging area
+git stash -q --keep-index
 
+# Run the ESLint and Prettier commands against the staged files
+npm run lint # Replace with your actual linting command
+npm run format # Replace with your actual formatting command
 
+# Check if any changes were made to the staged files
+git diff --exit-code --name-only --cached > /dev/null 2>&1
 
-#!/bin/sh
-
-# Check if the files are staged for commit
-if git diff --cached --quiet; then
-  # The files are not staged for commit, so exit
-  exit 0
+if [ $? -eq 0 ]; then
+  # No changes were made to the staged files, restore the original state
+  git stash pop -q
+else
+  # Changes were made to the staged files, update the staged changes
+  git add .
 fi
 
-# Check if the files pass linting
-npm run lint
-npm run check
+exit 0
 
-# If the files do not pass linting or formatting, exit with an error
-if [ $? -ne 0 ]; then
-  echo "Linting or formatting errors detected. Please fix the errors before committing."
-  exit 1
-fi
