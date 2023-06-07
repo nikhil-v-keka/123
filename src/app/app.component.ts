@@ -26,6 +26,14 @@ export class AppComponent implements OnInit {
     }
   }
 
+  printHello(){
+    //comment
+    const a:number = 1;
+
+    console.log(a);
+    
+  }
+
   users: User[] = [
     {
       name: 'John Doe',
