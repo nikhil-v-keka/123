@@ -12,4 +12,9 @@ export class BasicComponent {
     //sample function
     console.log('hello world');
   }
+
+  function2() {
+    //second function
+    console.log('hi');
+  }
 }
