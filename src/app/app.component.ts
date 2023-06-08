@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     // /* eslint-enable */
     console.log('this is for testing : ');
 
-    for (let i: number = 0; i < 5; i++) {
+                          for (let i: number = 0; i < 5; i++) {
       console.log(i);
     }
   }
