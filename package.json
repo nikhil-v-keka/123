@@ -15,8 +15,8 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{ts,html}":["prettier --write"],
-    "src/**/*.{ts}":["eslint --rulesdir rules --fix"]
+    "src/**/*.{ts,html}":"prettier --write",
+    "src/**/*.{ts}":"eslint --rulesdir rules --fix"
   },
   "private": true,
   "dependencies": {
