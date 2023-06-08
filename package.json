@@ -8,14 +8,15 @@
     "watch": "ng build --watch --configuration development",
     "pretest": "lint-staged",
     "test": "ng test",
-    "lint": "eslint . --rulesdir rules",
+    "lint": "ng lint",
+    "lint-fix":"eslint src --fix",
     "check": "prettier --check src",
     "format": "prettier --write src",
     "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,jsx,ts,tsx,vue}": [
-      "npm run lint", "npm run format"
+      "npm run lint"
     ]
   },
   "private": true,
