@@ -27,9 +27,8 @@ export class AppComponent implements OnInit {
   }
 
   printHello() {
-    //this is a example function
-    let a: number = 1;
-    a = a + 1;
+    //sample comment
+    const a: number = 1;
     console.log(a);
   }
 
