@@ -9,15 +9,14 @@
     "pretest": "lint-staged",
     "test": "ng test",
     "lint": "ng lint",
-    "lint-fix":"eslint src --fix",
+    "lint-fix": "eslint src --fix",
     "check": "prettier --check src",
     "format": "prettier --write src",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,mjs,cjs,jsx,ts,tsx,vue}": [
-      "npm run lint"
-    ]
+    "src/**/*.{ts,html}":"prettier --write",
+    "src/**/*.{ts}":"eslint --rulesdir rules --fix"
   },
   "private": true,
   "dependencies": {

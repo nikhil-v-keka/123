@@ -1,25 +1,3 @@
-#!/bin/bash
-
-# Create a temporary directory for staging
-STAGING_DIR=$(mktemp -d)
-
-# Copy the staged files to the temporary staging directory
-git diff --name-only --cached | xargs -I {} cp --parents {} $STAGING_DIR
-
-# Run the ESLint and Prettier commands with the --fix option against the temporary staging directory
-cd $STAGING_DIR
-npm run pretest # Replace with your actual formatting command
-
-# Check if any changes were made to the staged files in the temporary staging directory
-CHANGED_FILES=$(git diff --name-only)
-if [ -n "$CHANGED_FILES" ]; then
-  # Changes were made, update the staged files in the Git repository
-  cd -
-  cp -R $STAGING_DIR/* .
-  git add .
-fi
-
-# Clean up the temporary staging directory
-rm -rf $STAGING_DIR
-
-exit 0
+#!/bin/sh
+. "$(dirname -- "$0")/_/husky.sh"
+npx lint-staged

@@ -12,12 +12,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // /* eslint-disable */
-    if (this.name === 'nikhil')  {console.log('Correct');}
-    else 
-    {console.log('Incorrect');}
-    
-    
-    
+    if (this.name === 'nikhil') {
+      console.log('Correct');
+    } else {
+      console.log('Incorrect');
+    }
+
     // /* eslint-enable */
     console.log('this is for testing : ');
 
@@ -27,12 +27,10 @@ export class AppComponent implements OnInit {
   }
 
   printHello() {
-    let a:number = 1;
-    a=a+1;
+    let a: number = 1;
+    a = a + 1;
     console.log(a);
-    
   }
-
 
   users: User[] = [
     {
