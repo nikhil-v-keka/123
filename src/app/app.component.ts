@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
   }
 
   printHello() {
+    //this is a example function
     let a: number = 1;
     a = a + 1;
     console.log(a);
@@ -34,7 +35,7 @@ export class AppComponent implements OnInit {
 
   users: User[] = [
     {
-      name: 'John Doe',
+      name: 'John Abraham',
       job: 'Architect and Engineer',
     },
     {
