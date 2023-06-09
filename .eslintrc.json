@@ -48,7 +48,7 @@
         "curly":["error"],
         "quotes":["warn","single", { "avoidEscape": true} ],
         "no-empty":"error",
-        "function-comment":"error",
+        // "function-comment":"error",
         "@typescript-eslint/no-inferrable-types": "off"
       }
     },
