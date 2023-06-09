@@ -15,8 +15,14 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{ts,html}":["prettier --write","git diff --cached --name-only --diff-filter=ACM "],
-    "src/**/*.{ts}":["eslint --rulesdir rules --fix","git diff --cached --name-only --diff-filter=ACM"]
+    "src/**/*.html": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.ts": [
+      "eslint --rulesdir rules --fix",
+      "git add"
+    ]
   },
   "private": true,
   "dependencies": {
