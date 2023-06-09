@@ -15,11 +15,11 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.html": [
+    "*.html": [
       "prettier --write",
       "git add"
     ],
-    "src/**/*.ts": [
+    "*.ts": [
       "eslint --rulesdir rules --fix",
       "git add"
     ]
