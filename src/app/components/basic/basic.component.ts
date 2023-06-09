@@ -10,7 +10,7 @@ export class BasicComponent {
 
   sampleFunction() {
     //sample function
-    console.log('hello world');
+    console.log('my name is Nikhil');
   }
 
   function2() {
