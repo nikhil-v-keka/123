@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class BasicComponent {
   name: string = 'nikhil';
 
-  sampleFunction(){
+  sampleFunction() {
     //sample function
     console.log('my name is Nikhil');
   }

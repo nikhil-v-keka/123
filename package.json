@@ -15,15 +15,12 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.html": [
-      "prettier --write",
-      "git add"
+    "*.{html,ts}": [
+      "prettier --write"
     ],
     "*.ts": [
-      "eslint --rulesdir rules --fix",
-      "git add"
-    ],
-    "**/*": "lint-staged --ignore-staged"
+      "eslint --rulesdir rules --fix"
+    ]
   },
   "private": true,
   "dependencies": {
