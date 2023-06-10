@@ -1,7 +1,9 @@
 #!/bin/sh
 . "$(dirname -- "$0")/_/husky.sh"
-
+# git stash
+# git stash apply
 npx lint-staged
+# git stash pop
 
 # npm run lint-staged
 # npx lint-staged --no-write
