@@ -29,7 +29,7 @@ else
   if [ -n "$(git status --porcelain)" ]; then
     # Commit the changes on the temporary branch
     git add .
-    git commit -m "Apply ESLint and Prettier formatting"
+    git commit -m "add ESLint and Prettier formatting"
   else
     # No modifications, switch back to the original branch and delete the temporary branch
     git checkout -
