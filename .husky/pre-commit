@@ -2,7 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 # git stash
 # git stash apply
-# npx lint-staged
+npx lint-staged
 # git stash pop
 
 # npm run lint-staged
@@ -13,37 +13,37 @@
 #!/bin/sh
 # .husky/pre-commit
 
-# Check if the temporary branch already exists
-if [ "$(git rev-parse --verify temp-branch)" ]; then
-  # Temporary branch already exists, switch to it
-  git checkout temp-branch
-else
-  # Create a new temporary branch
-  git branch temp-branch
-  git checkout temp-branch
+# # Check if the temporary branch already exists
+# if [ "$(git rev-parse --verify temp-branch)" ]; then
+#   # Temporary branch already exists, switch to it
+#   git checkout temp-branch
+# else
+#   # Create a new temporary branch
+#   git branch temp-branch
+#   git checkout temp-branch
 
-  # Run ESLint and Prettier on staged files only
-  npx lint-staged
+#   # Run ESLint and Prettier on staged files only
+#   npx lint-staged
 
-  # Check if there are any modifications
-  if [ -n "$(git status --porcelain)" ]; then
-    # Commit the changes on the temporary branch
-    git add .
-    git commit -m "add ESLint and Prettier formatting"
-  else
-    # No modifications, switch back to the original branch and delete the temporary branch
-    git checkout -
-    git branch -D temp-branch
-    exit 0
-  fi
-fi
+#   # Check if there are any modifications
+#   if [ -n "$(git status --porcelain)" ]; then
+#     # Commit the changes on the temporary branch
+#     git add .
+#     git commit -m "add ESLint and Prettier formatting"
+#   else
+#     # No modifications, switch back to the original branch and delete the temporary branch
+#     git checkout -
+#     git branch -D temp-branch
+#     exit 0
+#   fi
+# fi
 
-# Switch back to the original branch
-git checkout -
+# # Switch back to the original branch
+# git checkout -
 
-# Merge the temporary branch into the original branch
-git merge temp-branch --no-ff --no-edit
+# # Merge the temporary branch into the original branch
+# git merge temp-branch --no-ff --no-edit
 
-git checkout master
-# Delete the temporary branch
-git branch -D temp-branch
+# git checkout master
+# # Delete the temporary branch
+# git branch -D temp-branch

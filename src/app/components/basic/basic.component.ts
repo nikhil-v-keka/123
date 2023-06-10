@@ -10,9 +10,7 @@ export class BasicComponent {
 
   sampleFunction() {
     //sample function
-    if (this.name === 'nikhil') {
-      console.log('my name is Nikhil');
-    }
+    if (this.name === 'nikhil') {console.log('my name is Nikhil');}
   }
 
   function2() {
